@@ -1,0 +1,80 @@
+<!-- Ашхабад-Алматы 11.02.2019 в один конец 2 взрослых, 1 ребенок, 1 грудничок-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.soap.ws.crane.hititcs.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <impl:GetAirAvailability>
+         <AirAvailabilityRequest>
+		    <!-- Логин/пароль для тестового стенда http://tua-stage.crane.aero/craneota/CraneOTAService -->
+            <clientInformation>
+               <clientIP>129.0.0.1</clientIP>
+               <member>false</member>
+               <password>Test123</password>
+               <userName>CHISTA</userName>
+            </clientInformation>
+            <originDestinationInformationList>
+			<!-- +- от заданной даты отправления -->
+               <dateOffset>3</dateOffset>
+			   <!-- Предполагаемая дата отправления -->
+               <departureDateTime>2019-02-11</departureDateTime>
+			   <!-- Место прибытия-->
+               <destinationLocation>
+			       <!-- Код аэропорта прибытия по IATA-->
+                  <locationCode>ALA</locationCode>
+               </destinationLocation>
+			   <!-- Поиск только по прямым рейсам. По умолчанию false-->
+               <directFlightsOnly/>
+			   <!-- Поиск только по гибким тарифам -->
+               <flexibleFaresOnly>false</flexibleFaresOnly>
+			   <!-- Поиск только по рейсам, между команиями которых заключен договор интерлайн
+               Соглашение-Интерлайн – коммерческое соглашение, заключенное между двумя
+               Авиакомпаниями или в рамках МИТА о взаимном или одностороннем признании
+               перевозочных и платежных документов, выполнении по ним воздушных перевозок и
+               соответствующих взаиморасчетов			   -->
+               <includeInterlineFlights>false</includeInterlineFlights>
+			    <!-- Билеты с открытой датой-->
+               <openFlight>false</openFlight>
+			   <!-- Место отправления-->
+               <originLocation>
+			    <!-- Код аэропорта отправления по IATA-->
+                  <locationCode>ASB</locationCode>
+               </originLocation>
+            </originDestinationInformationList>
+			<!-- Описания всех типов пассажиров . Нужно указать
+                 passengerType.code	(ADLT/CHLD/INFT)
+                 Нужны ли носилки hasStrecher
+                 Количество пассажиров данного типа quantity -->
+            <travelerInformation>
+			<!-- Описание типов пассажиров, их количества, блоков может быть от 0 до бесконечности -->
+               <passengerTypeQuantityList>
+			   <!-- Нужны ли носилки, если специально не указано, то по умолчанию false -->
+                  <hasStrecher/>
+				  <!-- Тип пассажиров-->
+                  <passengerType>
+                     <code>ADLT</code>
+                  </passengerType>
+				  <!-- Количество пассажиров данного типа-->
+                  <quantity>2</quantity>
+               </passengerTypeQuantityList>
+			   
+               <passengerTypeQuantityList>
+                  <hasStrecher/>
+                  <passengerType>
+                     <code>CHLD</code>
+                  </passengerType>
+                  <quantity>1</quantity>
+               </passengerTypeQuantityList>
+			   
+               <passengerTypeQuantityList>
+                  <hasStrecher/>
+                  <passengerType>
+                     <code>INFT</code>
+                  </passengerType>
+                  <quantity>1</quantity>
+               </passengerTypeQuantityList>
+            </travelerInformation>
+			<!-- Тип авиамаршрута, может быть ONE_WAY/ROUND_TRIP/MULTI_DIRECTIONAL -->
+            <tripType>ONE_WAY</tripType>
+         </AirAvailabilityRequest>
+      </impl:GetAirAvailability>
+   </soapenv:Body>
+</soapenv:Envelope>
