@@ -1,0 +1,562 @@
+<?xml version="1.0" ?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:GetAirAvailabilityResponse xmlns:ns2="http://impl.soap.ws.crane.hititcs.com/">
+            <AirAvailabilityResponse>
+
+                <airAvailability>
+				<!-- Дублирование информации из запроса. Информация о месте  отправления -->
+                    <originDestinationInformationList>
+                        <!-- +- от заданной даты отправления -->
+						<dateOffset>1</dateOffset>
+						 <!-- Дата отправления -->
+                        <departureDateTime>2019-02-10T00:00:00+05:00</departureDateTime>
+						 <!-- Место прибытия-->
+                        <destinationLocation>
+						<!-- Нормативный контроль-->
+                            <codeContext>IATA</codeContext>
+						<!-- Код аэропорта прибытия по IATA-->	
+                            <locationCode>ALA</locationCode>
+						<!-- Наименование города прибытия -->
+                            <locationName>Almaty</locationName>
+						<!-- Поиск только по прямым рейсам. По умолчанию false-->	
+                        </destinationLocation>
+						<!-- Поиск только по гибким тарифам -->
+                        <flexibleFaresOnly>false</flexibleFaresOnly>
+						<!-- Поиск только по рейсам, между команиями которых заключен договор интерлайн
+               Соглашение-Интерлайн – коммерческое соглашение, заключенное между двумя
+               Авиакомпаниями или в рамках МИТА о взаимном или одностороннем признании
+               перевозочных и платежных документов, выполнении по ним воздушных перевозок и
+               соответствующих взаиморасчетов	 -->
+                        <includeInterlineFlights>false</includeInterlineFlights>
+						<!-- Билеты с открытой датой-->
+                        <openFlight>false</openFlight>
+						  <!-- Место отправления-->
+                        <originLocation>
+						<!-- Нормативный контроль-->
+                            <codeContext>IATA</codeContext>
+							<!-- Код аэропорта прибытия по IATA-->
+                            <locationCode>ASB</locationCode>
+							<!-- Наименование города прибытия -->
+                            <locationName>Ashgabad</locationName>
+                        </originLocation>
+						
+						<!-- Начало ответа. Если этого тега нет, значит ни одного рейса
+						в этот день не имеется по указанному направлению  -->
+                        <originDestinationOptionsList>
+                            <arrivalAirport>
+                                <codeContext>IATA</codeContext>
+                                <locationCode>ALA</locationCode>
+                                <locationName>Almaty</locationName>
+                            </arrivalAirport>
+                            <departureAirport>
+                                <codeContext>IATA</codeContext>
+                                <locationCode>ASB</locationCode>
+                                <locationName>Ashgabad</locationName>
+                            </departureAirport>
+							<!-- Дата вылета -->
+                            <departureDate>2019-02-10T00:00:00+05:00</departureDate>
+							<!-- Информация об аэропорте прибытия -->
+                            <originDestinationOptionList>
+                                <arrivalAirport>
+                                    <codeContext>IATA</codeContext>
+                                    <locationCode>ALA</locationCode>
+                                    <locationName>Almaty</locationName>
+                                </arrivalAirport>
+								<!-- Точные дата и время прибытия -->
+                                <arrivalDateTime>2019-02-11T00:45:00+05:00</arrivalDateTime>
+								
+                                <availabilityFlightSegmentList>
+                                    <addOnSegment>false</addOnSegment>
+					<!-- Описание 1 из нескольких возможных классов для заказа -->
+                                    <bookingClassAvailabilityList>
+									<!-- Точные дата и время прибытия -->
+                                        <bookingClass>
+										<!-- Класс обслуживания -->
+                                            <cabin>BUSINESS</cabin>
+											<!-- Код салона -->
+                                            <resBookDesigCode>C</resBookDesigCode>
+											<!-- Количество мест, доступных для резервирования -->
+                                            <resBookDesigQuantity>10</resBookDesigQuantity>
+                                        </bookingClass>
+									<!-- Информация о тарифах-->	
+                                        <fareDisplayInfos>
+                                            <fareDisplayInfoList>
+                                                <fareInfo>
+												<!-- Код класс обслуживания -->
+                                                    <cabinClassCode>C</cabinClassCode>
+													<!-- Класс обслуживания -->
+                                                    <fareGroupName>BUSINESS</fareGroupName>
+													<!-- Код тарифа -->
+                                                    <fareReferenceCode>COW 43</fareReferenceCode>
+                                                    <!-- Идентификатор тарифа -->
+													<fareReferenceID>24cd2a30d776cc52d5b91e480fe9a89f4ae6276d9c62a4f8b1e4ab5b010abfe82ec0646bd6fb3c30a0874f7626c4cc43e0d6cb88500fd1684a5fb767e688a36a</fareReferenceID>
+                                                    <!-- Название тарифа -->
+													<fareReferenceName>C12OW </fareReferenceName>
+													<!-- Номер в последовательности участков траектории полёта -->
+                                                    <flightSegmentSequence>1</flightSegmentSequence>
+													<!-- Код класса обслуживания, на который должен быть перебронирован рейса
+													по более низкому тарифу-->
+                                                    <resBookDesigCode>C</resBookDesigCode>
+                                                </fareInfo>
+												
+												<!-- Описания 1 из нескольких возможных типов пассажиров(взрослый, ребенок, младенец) -->   
+                                                <pricingInfoList>
+                                           <!-- Описание основного тарифа-->
+                                                    <baseFare>
+                                                        <amount>
+											<!-- Код валюты. Берется из запроса, если не указан, то TMT -->
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+											<!-- Стоимость тарифа-->	
+                                                            <value>26455.0</value>
+                                                        </amount>
+                                                    </baseFare>
+											<!-- Норма провоза багажа-->	
+                                                    <fareBaggageAllowance>0</fareBaggageAllowance>
+													
+													
+                                             <!-- Сборы (государственные, аэропорта) -->       
+													<fareConstruction></fareConstruction>
+                                                    <fees>
+                                                        <feeList>
+                                                            <feeAmount>
+                                                                <currency>
+                                                                    <code></code>
+                                                                </currency>
+                                                                <value>0.0</value>
+                                                            </feeAmount>
+                                                            <feeCode>QC</feeCode>
+                                                            <paid>false</paid>
+											<!-- Налоговая ставка-->
+                                                            <taxPercentage>0.0</taxPercentage>
+                                                        </feeList>
+                                                        <totalAmount>
+                                                            <currency>
+															<!-- Код валюты. Берется из запроса, если не указан, то TMT -->
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>0.0</value>
+                                                        </totalAmount>
+                                                    </fees>
+													
+											<!-- Доплаты -->		
+                                                    <surcharges>
+                                                        <totalAmount>
+                                                            <currency>
+															<!-- Код валюты. Берется из запроса, если не указан, то TMT -->
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>0.0</value>
+                                                        </totalAmount>
+                                                    </surcharges>
+													
+													
+											<!-- Налоги -->			
+                                                    <taxes>
+                                                        <taxList>
+														<!-- Индикатор оплачености -->	
+                                                            <paid>false</paid>
+                                                            <taxAmount>
+                                                                <currency>
+																<!-- Код валюты. Берется из запроса, если не указан, то TMT -->
+                                                                    <code>RUB</code>
+                                                                </currency>
+                                                                <value>2315.0</value>
+                                                            </taxAmount>
+                                                            <taxCode>TM</taxCode>
+                                                            <taxType>T</taxType>
+                                                        </taxList>
+                                                        <taxList>
+                                                            <paid>false</paid>
+                                                            <taxAmount>
+                                                                <currency>
+                                                                    <code>RUB</code>
+                                                                </currency>
+                                                                <value>992.0</value>
+                                                            </taxAmount>
+                                                            <taxCode>QP</taxCode>
+                                                            <taxType>T</taxType>
+                                                        </taxList>
+                                                        <totalAmount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>3307.0</value>
+                                                        </totalAmount>
+                                                    </taxes>
+													
+													
+											<!-- Итоговая стоимость билета -->
+                                                    <totalFare>
+                                                        <amount>
+														<!-- Код подтверждения финансового действия -->
+                                                            <accountingSign>ADC</accountingSign>
+															<!-- Код валюты расчёта-->
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+															<!-- Итоговая сумма билета для данного типа пассажира (взрослого)-->
+                                                            <value>29762.0</value>
+                                                        </amount>
+                                                    </totalFare>
+													
+													
+													
+                                                    <discountApplied>false</discountApplied>
+													<!-- Тип пассажира (врослый, ребенок и младенец) --> 
+                                                    <passengerTypeCode>ADLT</passengerTypeCode>
+                                                </pricingInfoList>
+												<!-- Окончание описания 1 из нескольких возможных типов пассажиров(взрослый, ребенок, младенец) -->     
+                                            </fareDisplayInfoList>
+                                        </fareDisplayInfos>
+                                    </bookingClassAvailabilityList>
+                      <!-- Окончание описания 1 из нескольких возможных классов для заказа -->              
+									
+									<bookingClassAvailabilityList>
+                                        <bookingClass>
+                                            <cabin>ECONOMY</cabin>
+                                            <resBookDesigCode>Y</resBookDesigCode>
+                                            <resBookDesigQuantity>115</resBookDesigQuantity>
+                                        </bookingClass>
+                                        <fareDisplayInfos>
+                                            <fareDisplayInfoList>
+                                                <fareInfo>
+                                                    <cabinClassCode>Y</cabinClassCode>
+                                                    <fareGroupName>ECONOMY</fareGroupName>
+                                                    <fareReferenceCode>YOW 43</fareReferenceCode>
+                                                    <fareReferenceID>d6e4019f264a9d1209d64c31bbb515176ddb2ac9034e429b4e593b5ba7f25e057d1190a6f7660377512af961bf6ebaa5bc98d1d3cc910afe45fe0ed6aba359bf</fareReferenceID>
+                                                    <fareReferenceName>Y12OW </fareReferenceName>
+                                                    <flightSegmentSequence>1</flightSegmentSequence>
+                                                    <resBookDesigCode>Y</resBookDesigCode>
+                                                </fareInfo>
+                                                <pricingInfoList>
+                                                    <baseFare>
+                                                        <amount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>19842.0</value>
+                                                        </amount>
+                                                    </baseFare>
+                                                    <fareBaggageAllowance>0</fareBaggageAllowance>
+                                                    <fareConstruction></fareConstruction>
+                                                    <fees>
+                                                        <feeList>
+                                                            <feeAmount>
+                                                                <currency>
+                                                                    <code></code>
+                                                                </currency>
+                                                                <value>0.0</value>
+                                                            </feeAmount>
+                                                            <feeCode>QC</feeCode>
+                                                            <paid>false</paid>
+                                                            <taxPercentage>0.0</taxPercentage>
+                                                        </feeList>
+                                                        <totalAmount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>0.0</value>
+                                                        </totalAmount>
+                                                    </fees>
+                                                    <surcharges>
+                                                        <totalAmount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>0.0</value>
+                                                        </totalAmount>
+                                                    </surcharges>
+                                                    <taxes>
+                                                        <taxList>
+                                                            <paid>false</paid>
+                                                            <taxAmount>
+                                                                <currency>
+                                                                    <code>RUB</code>
+                                                                </currency>
+                                                                <value>2315.0</value>
+                                                            </taxAmount>
+                                                            <taxCode>TM</taxCode>
+                                                            <taxType>T</taxType>
+                                                        </taxList>
+                                                        <taxList>
+                                                            <paid>false</paid>
+                                                            <taxAmount>
+                                                                <currency>
+                                                                    <code>RUB</code>
+                                                                </currency>
+                                                                <value>992.0</value>
+                                                            </taxAmount>
+                                                            <taxCode>QP</taxCode>
+                                                            <taxType>T</taxType>
+                                                        </taxList>
+                                                        <totalAmount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>3307.0</value>
+                                                        </totalAmount>
+                                                    </taxes>
+                                                    <totalFare>
+                                                        <amount>
+                                                            <accountingSign>ADC</accountingSign>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>23149.0</value>
+                                                        </amount>
+                                                    </totalFare>
+                                                    <discountApplied>false</discountApplied>
+                                                    <passengerTypeCode>ADLT</passengerTypeCode>
+                                                </pricingInfoList>
+                                            </fareDisplayInfoList>
+                                        </fareDisplayInfos>
+                                    </bookingClassAvailabilityList>
+                                    <bookingClassAvailabilityList>
+                                        <bookingClass>
+                                            <cabin>ECONOMY</cabin>
+                                            <resBookDesigCode>H</resBookDesigCode>
+                                            <resBookDesigQuantity>115</resBookDesigQuantity>
+                                        </bookingClass>
+                                        <fareDisplayInfos>
+                                            <fareDisplayInfoList>
+                                                <fareInfo>
+                                                    <cabinClassCode>Y</cabinClassCode>
+                                                    <fareGroupName>ECONOMY</fareGroupName>
+                                                    <fareReferenceCode>HOW 6M43</fareReferenceCode>
+                                                    <fareReferenceID>ff532d2a8718df89d9e2479b8e3950d3473d137ece207c6b8cf0cd30e71ca4f7c0ada72f25ebf57eeac01e8fc9b3f10cfaca78c4200da4f9286c77af7bbd904c</fareReferenceID>
+                                                    <fareReferenceName>H6OW/USD </fareReferenceName>
+                                                    <flightSegmentSequence>1</flightSegmentSequence>
+                                                    <resBookDesigCode>H</resBookDesigCode>
+                                                </fareInfo>
+                                                <pricingInfoList>
+                                                    <baseFare>
+                                                        <amount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>13229.0</value>
+                                                        </amount>
+                                                    </baseFare>
+                                                    <fareBaggageAllowance>0</fareBaggageAllowance>
+                                                    <fareConstruction></fareConstruction>
+                                                    <fees>
+                                                        <feeList>
+                                                            <feeAmount>
+                                                                <currency>
+                                                                    <code></code>
+                                                                </currency>
+                                                                <value>0.0</value>
+                                                            </feeAmount>
+                                                            <feeCode>QC</feeCode>
+                                                            <paid>false</paid>
+                                                            <taxPercentage>0.0</taxPercentage>
+                                                        </feeList>
+                                                        <totalAmount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>0.0</value>
+                                                        </totalAmount>
+                                                    </fees>
+                                                    <surcharges>
+                                                        <totalAmount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>0.0</value>
+                                                        </totalAmount>
+                                                    </surcharges>
+                                                    <taxes>
+                                                        <taxList>
+                                                            <paid>false</paid>
+                                                            <taxAmount>
+                                                                <currency>
+                                                                    <code>RUB</code>
+                                                                </currency>
+                                                                <value>2315.0</value>
+                                                            </taxAmount>
+                                                            <taxCode>TM</taxCode>
+                                                            <taxType>T</taxType>
+                                                        </taxList>
+                                                        <taxList>
+                                                            <paid>false</paid>
+                                                            <taxAmount>
+                                                                <currency>
+                                                                    <code>RUB</code>
+                                                                </currency>
+                                                                <value>992.0</value>
+                                                            </taxAmount>
+                                                            <taxCode>QP</taxCode>
+                                                            <taxType>T</taxType>
+                                                        </taxList>
+                                                        <totalAmount>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>3307.0</value>
+                                                        </totalAmount>
+                                                    </taxes>
+                                                    <totalFare>
+                                                        <amount>
+                                                            <accountingSign>ADC</accountingSign>
+                                                            <currency>
+                                                                <code>RUB</code>
+                                                            </currency>
+                                                            <value>16536.0</value>
+                                                        </amount>
+                                                    </totalFare>
+                                                    <discountApplied>false</discountApplied>
+                                                    <passengerTypeCode>ADLT</passengerTypeCode>
+                                                </pricingInfoList>
+                                            </fareDisplayInfoList>
+                                        </fareDisplayInfos>
+                                    </bookingClassAvailabilityList>
+                                    
+									<!-- Описание рейса -->       
+									<flightSegment>
+									<!-- Код авиакомпании по IATA-->
+                                        <airline>
+                                            <code>T5</code>
+                                        </airline>
+										
+										
+									<!-- Информация о место прибытия-->	
+                                        <arrivalAirport>
+                                            <cityInfo>
+											<!-- Город прибытия (код аэропорта, наименование города прибытия)-->
+                                                <city>
+                                                    <locationCode>ALA</locationCode>
+                                                    <locationName>Almaty</locationName>
+													<!-- Указание языка, на котором написано название города-->
+                                                    <locationNameLanguage>EN</locationNameLanguage>
+                                                </city>
+                                                <country>
+												<!-- Страна прибытия (код страны, наименование страны прибытия) -->
+                                                    <locationCode>KZ</locationCode>
+                                                    <locationName>Kazakhstan</locationName>
+													<!-- Указание языка, на котором написано название страны-->
+                                                    <locationNameLanguage>EN</locationNameLanguage>
+													<!-- Код валюты-->
+                                                    <currency>
+                                                        <code>KZT</code>
+                                                    </currency>
+                                                </country>
+                                            </cityInfo>
+											<!-- Нормативный контроль-->
+                                            <codeContext>IATA</codeContext>
+											<!-- Язык описания наименований в документе-->
+                                            <language>EN</language>
+											<!-- Код аэропорта прибытия-->
+                                            <locationCode>ALA</locationCode>
+											<!-- Наименование аэропорта прибытия-->
+                                            <locationName>Almaty</locationName>
+                                        </arrivalAirport>
+										<!-- Точное время прибытия рейса-->
+                                        <arrivalDateTime>2019-02-11T00:45:00+05:00</arrivalDateTime>
+										<!-- Информация об месте отправления-->
+                                        <departureAirport>
+                                            <cityInfo>
+											<!-- Город отправления (код аэропорта, наименование города отправления)-->
+                                                <city>
+                                                    <locationCode>ASB</locationCode>
+                                                    <locationName>Ashgabad</locationName>
+													<!-- Указание языка, на котором написано название города-->
+                                                    <locationNameLanguage>EN</locationNameLanguage>
+                                                </city>
+                                                <country>
+												<!-- Страна отправления (код страны, наименование страны оправления) -->
+                                                    <locationCode>TM</locationCode>
+                                                    <locationName>Turkmenistan</locationName>
+													<!-- Указание языка, на котором написано название страны-->
+                                                    <locationNameLanguage>EN</locationNameLanguage>
+													<!-- Код валюты-->
+                                                    <currency>
+                                                        <code>TMT</code>
+                                                    </currency>
+                                                </country>
+                                            </cityInfo>
+											<!-- Нормативный контроль-->
+                                            <codeContext>IATA</codeContext>
+											<!-- Язык описания наименований в документе-->
+                                            <language>EN</language>
+											<!-- Код аэропорта отправления-->
+                                            <locationCode>ASB</locationCode>
+												<!-- Наименование аэропорта отправления -->
+                                            <locationName>Ashgabat International</locationName>
+                                        </departureAirport>
+										<!-- Точное время отправления-->
+                                        <departureDateTime>2019-02-10T21:00:00+05:00</departureDateTime>
+										<!-- Номер рейса без кода авиакомпании (полный номер будет, например, T5 715)-->
+                                        <flightNumber>715</flightNumber>
+										<!-- Идентификационный код сегмента -->
+                                        <flightSegmentID></flightSegmentID>
+										<!-- ?-->
+                                        <ondControlled>false</ondControlled>
+										<!-- Если самолет перемещется внутри страны - DOMESTIC, иначе - INTERNATIONAL-->
+                                        <sector>INTERNATIONAL</sector>
+										<!-- ?-->
+                                        <accumulatedDuration></accumulatedDuration>
+										<!-- Возможность совместной эксплуатации авиарейса двумя и более авиакомпаниями -->
+                                        <codeshare>false</codeshare>
+										<!-- Смена дня (если самолет прилетает на следующие сутки, то код +1, если в эти же сутки, то 0) -->
+                                        <dateChangeNbr>+1</dateChangeNbr>
+										<!-- ?-->
+                                        <distance>0</distance>
+										<!-- Тип самолета (например, B737-800 - тип самолета,16C/144Y - 2-х классная компановка,
+   								 	    16 мест бизнесс-класса, 144 - эконом-класса)-->
+                                        <equipment>
+                                            <airEquipType>B737-800_16C/144Y</airEquipType>
+										<!-- Смена самолета без смены номера - не предусмотрена-->
+                                            <changeofGauge>false</changeofGauge>
+                                        </equipment>
+										<!-- ?-->
+                                        <flightNotes>
+                                            <deiCode>0</deiCode>
+                                        </flightNotes>
+										<!-- ?-->
+                                        <flownMileageQty>0</flownMileageQty>
+										<!-- ?-->
+                                        <groundDuration></groundDuration>
+										<!-- Продолжительность рейса (в данном случае, 2 часа 45 минут) -->
+                                        <journeyDuration>PT2H45M</journeyDuration>
+										<!-- Повременный тариф -->
+                                        <onTimeRate>0</onTimeRate>
+										<!-- Требование данных (·фамилия, имя (так, как они указаны в паспорте, который будет предъявляться в аэропортуво время регистрации);
+										дата рождения; пол)-->
+                                        <secureFlightDataRequired>false</secureFlightDataRequired>
+										<!-- ?-->
+                                        <stopQuantity>0</stopQuantity>
+										<!-- Тип билета-->
+                                        <ticketType>PAPER</ticketType>
+										<!-- ?-->
+                                        <trafficRestriction>
+                                            <code></code>
+                                            <explanation></explanation>
+                                        </trafficRestriction>
+                                    </flightSegment>
+									<!-- ?-->
+                                    <marriageGrp>-1</marriageGrp>
+                                </availabilityFlightSegmentList>
+								<!-- Информация об аэропорте отправления-->
+                                <departureAirport>
+                                    <codeContext>IATA</codeContext>
+                                    <locationCode>ASB</locationCode>
+                                    <locationName>Ashgabad</locationName>
+                                </departureAirport>
+								<!-- Точная дата отправления-->
+                                <departureDateTime>2019-02-10T21:00:00+05:00</departureDateTime>
+								<!-- Доступность фикс-прайса-->
+                                <priceFreezingAvailable>false</priceFreezingAvailable>
+                            </originDestinationOptionList>
+                        </originDestinationOptionsList>
+						<!-- ?-->
+                        <sectorBased>true</sectorBased>
+                    </originDestinationInformationList>
+                </airAvailability>
+            </AirAvailabilityResponse>
+        </ns2:GetAirAvailabilityResponse>
+    </S:Body>
+</S:Envelope>
