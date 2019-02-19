@@ -1,0 +1,576 @@
+<?xml version="1.0" ?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:TicketReservationResponse xmlns:ns2="http://impl.soap.ws.crane.hititcs.com/">
+            <AirTicketReservationResponse>
+                <airBookingList>
+                    <airReservation>
+                        <airItinerary>
+                            <bookOriginDestinationOptions>
+                                <bookOriginDestinationOptionList>
+                                    <bookFlightSegmentList>
+                                        <actionCode>HK</actionCode>
+                                        <addOnSegment>false</addOnSegment>
+                                        <bookingClass>
+                                            <cabin>ECONOMY</cabin>
+                                            <resBookDesigCode>H</resBookDesigCode>
+                                            <resBookDesigQuantity>0</resBookDesigQuantity>
+                                        </bookingClass>
+                                        <fareInfo>
+                                            <cabinClassCode>Y</cabinClassCode>
+                                            <fareBaggageAllowance>
+                                                <allowanceType>WEIGHT</allowanceType>
+                                                <maxAllowedPieces>0</maxAllowedPieces>
+                                                <maxAllowedWeight>
+                                                    <unitOfMeasureCode>KG</unitOfMeasureCode>
+                                                    <weight>25</weight>
+                                                </maxAllowedWeight>
+                                            </fareBaggageAllowance>
+                                            <fareGroupName>ECONOMY</fareGroupName>
+                                            <fareReferenceCode>HOW 6M43</fareReferenceCode>
+                                            <fareReferenceID>f7d3f162792f256ba8a7b9eb09520362fecc6d67476a2ca1c9ab40d20b55162987df0730116205db3b83a84279fc29c84f2499566b7801330bd2c29b8aaff435</fareReferenceID>
+                                            <fareReferenceName>H6OW/USD </fareReferenceName>
+                                            <flightSegmentSequence>0</flightSegmentSequence>
+                                            <resBookDesigCode>H</resBookDesigCode>
+                                        </fareInfo>
+                                        <flightSegment>
+                                            <airline>
+                                                <code>T5</code>
+                                                <codeContext>IATA</codeContext>
+                                            </airline>
+                                            <arrivalAirport>
+                                                <cityInfo>
+                                                    <city>
+                                                        <locationCode>ALA</locationCode>
+                                                        <locationName>Almati</locationName>
+                                                        <locationNameLanguage>EN</locationNameLanguage>
+                                                    </city>
+                                                    <country>
+                                                        <locationCode>KZ</locationCode>
+                                                        <locationName>Kazakhstan</locationName>
+                                                        <locationNameLanguage>EN</locationNameLanguage>
+                                                        <currency>
+                                                            <code>KZT</code>
+                                                        </currency>
+                                                    </country>
+                                                </cityInfo>
+                                                <codeContext>IATA</codeContext>
+                                                <language>EN</language>
+                                                <locationCode>ALA</locationCode>
+                                                <locationName>Almaty</locationName>
+                                            </arrivalAirport>
+                                            <arrivalDateTime>2019-02-22T12:00:00+05:00</arrivalDateTime>
+                                            <departureAirport>
+                                                <cityInfo>
+                                                    <city>
+                                                        <locationCode>ASB</locationCode>
+                                                        <locationName>Ashkhabad</locationName>
+                                                        <locationNameLanguage>EN</locationNameLanguage>
+                                                    </city>
+                                                    <country>
+                                                        <locationCode>TM</locationCode>
+                                                        <locationName>Turkmenistan</locationName>
+                                                        <locationNameLanguage>EN</locationNameLanguage>
+                                                        <currency>
+                                                            <code>TMT</code>
+                                                        </currency>
+                                                    </country>
+                                                </cityInfo>
+                                                <codeContext>IATA</codeContext>
+                                                <language>EN</language>
+                                                <locationCode>ASB</locationCode>
+                                                <locationName>Ashgabat International</locationName>
+                                            </departureAirport>
+                                            <departureDateTime>2019-02-22T08:10:00+05:00</departureDateTime>
+                                            <flightNumber>717</flightNumber>
+                                            <flightSegmentID>1121577</flightSegmentID>
+                                            <ondControlled>false</ondControlled>
+                                            <sector>INTERNATIONAL</sector>
+                                            <accumulatedDuration></accumulatedDuration>
+                                            <codeshare>false</codeshare>
+                                            <distance>0</distance>
+                                            <equipment>
+                                                <airEquipType>738</airEquipType>
+                                                <changeofGauge>false</changeofGauge>
+                                            </equipment>
+                                            <flownMileageQty>0</flownMileageQty>
+                                            <groundDuration></groundDuration>
+                                            <journeyDuration>PT2H50M</journeyDuration>
+                                            <onTimeRate>0</onTimeRate>
+                                            <secureFlightDataRequired>false</secureFlightDataRequired>
+                                            <stopQuantity>0</stopQuantity>
+                                            <trafficRestriction>
+                                                <code></code>
+                                                <explanation></explanation>
+                                            </trafficRestriction>
+                                        </flightSegment>
+                                        <referenceID>7558522</referenceID>
+                                        <responseCode>HK</responseCode>
+                                        <sequenceNumber>0</sequenceNumber>
+                                        <status>HK</status>
+                                    </bookFlightSegmentList>
+                                </bookOriginDestinationOptionList>
+                            </bookOriginDestinationOptions>
+                        </airItinerary>
+                        <airTravelerList>
+                            <accompaniedByInfant>false</accompaniedByInfant>
+                            <birthDate>1985-06-10T00:00:00+06:00</birthDate>
+                            <companyInfo></companyInfo>
+                            <gender>M</gender>
+                            <hasStrecher>false</hasStrecher>
+                            <parentSequence>-1</parentSequence>
+                            <passengerTypeCode>ADLT</passengerTypeCode>
+                            <passportNumber>A-23422243</passportNumber>
+                            <personName>
+                                <givenName>AAA</givenName>
+                                <nameTitle>MR</nameTitle>
+                                <shareMarketInd>false</shareMarketInd>
+                                <surname>TEST</surname>
+                            </personName>
+                            <personNameEN>
+                                <givenName>AAA</givenName>
+                                <nameTitle>MR</nameTitle>
+                                <shareMarketInd>false</shareMarketInd>
+                                <surname>TEST</surname>
+                            </personNameEN>
+                            <requestedSeatCount>1</requestedSeatCount>
+                            <shareMarketInd>false</shareMarketInd>
+                            <socialSecurityNumber>123423433</socialSecurityNumber>
+                            <travelerReferenceID>6592606</travelerReferenceID>
+                            <unaccompaniedMinor>false</unaccompaniedMinor>
+                        </airTravelerList>
+                        <arrangerInfo>
+                            <agencyCode>ITM SEVER</agencyCode>
+                            <agencyName>RU ITM SEVER GSA Sales Office</agencyName>
+                            <agencyType>AG</agencyType>
+                            <contactInfo>
+                                <companyInfo>
+                                    <cityCode>PSG</cityCode>
+                                    <code>T5</code>
+                                    <codeContext>CRANE</codeContext>
+                                    <companyFullName>RU ITM SEVER GSA Sales Office</companyFullName>
+                                    <companyShortName>ITM SEVER</companyShortName>
+                                    <countryCode>RU</countryCode>
+                                </companyInfo>
+                                <personName>
+                                    <givenName>Full</givenName>
+                                    <shareMarketInd>false</shareMarketInd>
+                                    <surname> Name</surname>
+                                </personName>
+                                <shareMarketInd>false</shareMarketInd>
+                                <useForInvoicing>false</useForInvoicing>
+                            </contactInfo>
+                            <currency>RUB</currency>
+                            <IATANumber>12345678</IATANumber>
+                            <userCode>CH</userCode>
+                            <userName>CHISTA</userName>
+                        </arrangerInfo>
+                        <bookingReferenceIDList>
+                            <companyName>
+                                <cityCode>PSG</cityCode>
+                                <code>T5</code>
+                                <codeContext>CRANE</codeContext>
+                                <companyFullName>RU ITM SEVER GSA Sales Office</companyFullName>
+                                <companyShortName>ITM SEVER</companyShortName>
+                                <countryCode>RU</countryCode>
+                            </companyName>
+                            <ID>3A3P3T</ID>
+                            <referenceID>80596714</referenceID>
+                        </bookingReferenceIDList>
+                        <bookingType>R</bookingType>
+                        <contactInfoList>
+                            <adress>
+                                <addressLineList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></addressLineList>
+                                <countryCode>TR</countryCode>
+                                <formatted>false</formatted>
+                                <preferred>false</preferred>
+                                <shareMarketInd>false</shareMarketInd>
+                            </adress>
+                            <companyInfo>
+                                <cityCode>PSG</cityCode>
+                                <contactName>BBB TEST</contactName>
+                                <countryCode>RU</countryCode>
+                            </companyInfo>
+                            <email>
+                                <email>test@test.com</email>
+                                <markedForSendingRezInfo>true</markedForSendingRezInfo>
+                                <preferred>false</preferred>
+                                <shareMarketInd>false</shareMarketInd>
+                            </email>
+                            <personName>
+                                <givenName>BBB</givenName>
+                                <shareMarketInd>false</shareMarketInd>
+                                <surname> TEST</surname>
+                            </personName>
+                            <phoneNumber>
+                                <areaCode>555</areaCode>
+                                <countryCode>+90</countryCode>
+                                <markedForSendingRezInfo>false</markedForSendingRezInfo>
+                                <preferred>false</preferred>
+                                <shareMarketInd>false</shareMarketInd>
+                                <subscriberNumber>4443322</subscriberNumber>
+                            </phoneNumber>
+                            <shareMarketInd>false</shareMarketInd>
+                            <useForInvoicing>false</useForInvoicing>
+                        </contactInfoList>
+                        <dateCreated>2019-02-19T02:29:25+05:00</dateCreated>
+                        <groupBooking>false</groupBooking>
+                        <nonTicketedElementsExist>true</nonTicketedElementsExist>
+                        <smsSaleApplicable>false</smsSaleApplicable>
+                        <specialRequestDetails></specialRequestDetails>
+                        <ticketOnDeparture>false</ticketOnDeparture>
+                        <ticketTimeLimit>2019-02-20T02:29:28+05:00</ticketTimeLimit>
+                        <travelInsurance>
+                            <nationalIDRestrictionExist>false</nationalIDRestrictionExist>
+                            <selected>false</selected>
+                        </travelInsurance>
+                    </airReservation>
+                    <ticketInfo>
+                        <pricingType>SELL</pricingType>
+                        <ticketItemList>
+                            <airTraveler>
+                                <accompaniedByInfant>false</accompaniedByInfant>
+                                <birthDate>1985-06-10T00:00:00+06:00</birthDate>
+                                <companyInfo></companyInfo>
+                                <gender>M</gender>
+                                <hasStrecher>false</hasStrecher>
+                                <parentSequence>-1</parentSequence>
+                                <passengerTypeCode>ADLT</passengerTypeCode>
+                                <passportNumber>A-23422243</passportNumber>
+                                <personName>
+                                    <givenName>AAA</givenName>
+                                    <nameTitle>MR</nameTitle>
+                                    <shareMarketInd>false</shareMarketInd>
+                                    <surname>TEST</surname>
+                                </personName>
+                                <personNameEN>
+                                    <givenName>AAA</givenName>
+                                    <nameTitle>MR</nameTitle>
+                                    <shareMarketInd>false</shareMarketInd>
+                                    <surname>TEST</surname>
+                                </personNameEN>
+                                <requestedSeatCount>1</requestedSeatCount>
+                                <shareMarketInd>false</shareMarketInd>
+                                <socialSecurityNumber>123423433</socialSecurityNumber>
+                                <travelerReferenceID>6592606</travelerReferenceID>
+                                <unaccompaniedMinor>false</unaccompaniedMinor>
+                            </airTraveler>
+                            <couponInfoList>
+						       <!-- -Индикатор CONSUMED AT ISSUANCE, устанавливаемый авиакомпанией, показывает, что при оформлении EMD статус этого купона будет сразу устанавлен в F (flown/used) -->
+                                <consumedAtIssuence>false</consumedAtIssuence>
+                                <couponFlightSegment>
+                                    <actionCode>HK</actionCode>
+                                    <addOnSegment>false</addOnSegment>
+                                        <bookingClass>
+									<!-- Класс обслуживания -->
+                                     <cabin>ECONOMY</cabin>
+									 <!-- Код салона -->
+                                     <resBookDesigCode>H</resBookDesigCode>
+									 <!-- Количество мест, доступных для резервирования -->
+                                     <resBookDesigQuantity>121</resBookDesigQuantity>
+                                </bookingClass>
+                                    <fareInfo>
+                                        <cabinClassCode>Y</cabinClassCode>
+                                        <fareBaggageAllowance>
+                                          <!-- Тип -->
+                                                <allowanceType>WEIGHT</allowanceType>
+												 <!-- ? -->
+                                                <maxAllowedPieces>0</maxAllowedPieces>
+												 <!-- Максимально доступный вес-->
+                                                <maxAllowedWeight>
+												 <!-- Размерность -->
+                                                    <unitOfMeasureCode>KG</unitOfMeasureCode>
+													 <!-- Максимальный вес -->
+                                                    <weight>25</weight>
+                                                </maxAllowedWeight>
+                                            </fareBaggageAllowance>
+                                        <fareGroupName>ECONOMY</fareGroupName>
+                                        <fareReferenceCode>HOW 6M43</fareReferenceCode>
+                                        <fareReferenceID>f7d3f162792f256ba8a7b9eb09520362a1ef164681278eb11c7250b64506111f87df0730116205db3b83a84279fc29c84f2499566b7801330bd2c29b8aaff435</fareReferenceID>
+                                        <fareReferenceName>H6OW/USD </fareReferenceName>
+                                        <flightSegmentSequence>0</flightSegmentSequence>
+                                        <resBookDesigCode>H</resBookDesigCode>
+                                    </fareInfo>
+
+									<flightSegment>
+                                    <arrivalAirport>
+                                        <cityInfo>
+                                            <city>
+											<!-- Город прибытия (код аэропорта, наименование города прибытия)-->
+                                                <locationCode>ALA</locationCode>
+                                                <locationName>Almaty</locationName>
+												<!-- Указание языка, на котором написано название города-->
+                                                <locationNameLanguage>EN</locationNameLanguage>
+                                            </city>
+                                            <country>
+											<!-- Страна прибытия (код страны, наименование страны прибытия) -->
+                                                <locationCode>KZ</locationCode>
+                                                <locationName>Kazakhstan</locationName>
+												<!-- Указание языка, на котором написано название страны-->
+                                                <locationNameLanguage>EN</locationNameLanguage>
+												<!-- Код валюты-->
+                                                <currency>
+                                                    <code>KZT</code>
+                                                </currency>
+                                            </country>
+                                        </cityInfo>
+										<!-- Нормативный контроль-->
+                                        <codeContext>IATA</codeContext>
+										<!-- Язык описания наименований в документе-->
+                                        <language>EN</language>
+											<!-- Код аэропорта прибытия-->
+                                        <locationCode>ALA</locationCode>
+										<!-- Наименование аэропорта прибытия-->
+                                        <locationName>Almaty</locationName>
+                                    </arrivalAirport>
+									<!-- Точное время прибытия рейса-->
+                                    <arrivalDateTime>2019-02-22T12:00:00+05:00</arrivalDateTime>
+									<!-- Информация об месте отправления-->
+                                    <departureAirport>
+                                        <cityInfo>
+                                            <city>
+											<!-- Город отправления (код аэропорта, наименование города отправления)-->
+                                                <locationCode>ASB</locationCode>
+                                                <locationName>Ashgabad</locationName>
+												<!-- Указание языка, на котором написано название города-->
+                                                <locationNameLanguage>EN</locationNameLanguage>
+                                            </city>
+                                            <country>
+											<!-- Страна отправления (код страны, наименование страны оправления) -->
+                                                <locationCode>TM</locationCode>
+                                                <locationName>Turkmenistan</locationName>
+												<!-- Указание языка, на котором написано название страны-->
+                                                <locationNameLanguage>EN</locationNameLanguage>
+												<!-- Код валюты-->
+                                                <currency>
+                                                    <code>TMT</code>
+                                                </currency>
+                                            </country>
+                                        </cityInfo>
+										<!-- Нормативный контроль-->
+                                        <codeContext>IATA</codeContext>
+										<!-- Язык описания наименований в документе-->
+                                        <language>EN</language>
+											<!-- Код аэропорта отправления-->
+                                        <locationCode>ASB</locationCode>
+											<!-- Наименование аэропорта отправления -->
+                                        <locationName>Ashgabat International</locationName>
+                                    </departureAirport>
+									<!-- Точное время отправления-->
+                                    <departureDateTime>2019-02-22T08:10:00+05:00</departureDateTime>
+                                    <!-- Тип самолета (например, B737-800 - тип самолета,16C/144Y - 2-х классная компановка,
+   								 	    16 мест бизнесс-класса, 144 - эконом-класса)-->
+									<equipment>
+                                        <airEquipType>B737-800_16C/144Y</airEquipType>
+										<!-- Смена самолета без смены номера - не предусмотрена-->
+                                        <changeofGauge>false</changeofGauge>
+                                    </equipment>
+									<!-- ?-->
+                                    <stopQuantity>0</stopQuantity>
+									<!-- ?-->
+                                    <accumulatedDuration/>
+									<!-- Код авиакомпании по IATA-->
+                                    <airline>
+                                        <code>T5</code>
+                                    </airline>
+									<!-- Возможность совместной эксплуатации авиарейса двумя и более авиакомпаниями -->
+                                    <codeshare>false</codeshare>
+									<!-- ?-->
+                                    <distance>0</distance>
+									<!-- Номер рейса без кода авиакомпании (полный номер будет, например, T5 715)-->
+                                    <flightNumber>717</flightNumber>
+									<!-- Идентификационный код сегмента -->
+                                    <flightSegmentID/>
+									<!-- ?-->
+                                    <flownMileageQty>0</flownMileageQty>
+									<!-- ?-->
+                                    <groundDuration/>
+										<!-- Продолжительность рейса (в данном случае, 2 часа 55 минут) -->
+                                    <journeyDuration>PT2H55M</journeyDuration>
+									<!-- Повременный тариф -->
+                                    <onTimeRate>0</onTimeRate>
+									<!-- Если самолет перемещется внутри страны - DOMESTIC, иначе - INTERNATIONAL-->
+                                    <sector>INTERNATIONAL</sector>
+									<!-- Требование данных (·фамилия, имя (так, как они указаны в паспорте, который будет предъявляться в аэропортуво время регистрации);
+										дата рождения; пол)-->
+                                    <secureFlightDataRequired>false</secureFlightDataRequired>
+									<!-- Тип билета. Если электронные, то E_TICKET, иначе - PAPER-->
+                                    <ticketType>PAPER</ticketType>
+									<!-- ?-->
+                                    <trafficRestriction>
+                                        <code/>
+                                        <explanation/>
+                                    </trafficRestriction>
+                                </flightSegment>
+								<!-- ? -->
+                                    <referenceID>7558522</referenceID>
+                                  <!-- Код ответа (забронировано, но не оплачено)-->
+                                        <responseCode>HK</responseCode>
+										<!-- Номер последовательности -->
+                                        <sequenceNumber>0</sequenceNumber>
+										<!-- Статус(забронировано, но не оплачено)-->
+                                    <status>HK</status>
+                                </couponFlightSegment>
+									<!-- ? -->
+                                <noShow>false</noShow>
+                            </couponInfoList>
+                            <inclusiveTour>false</inclusiveTour>
+						     <!-- Описание формирования стоимости билета -->
+                            <pricingInfo>
+                                <baseFare>
+                                    <amount>
+                                        <accountingSign>ADC</accountingSign>
+                                        <currency>
+                                            <code>TMT</code>
+                                        </currency>
+                                        <value>700.1</value>
+                                    </amount>
+                                </baseFare>
+                                <equivBaseFare>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code>TMT</code>
+                                    </currency>
+                                    <value>700.1</value>
+                                </equivBaseFare>
+                                <fareBaggageAllowance>0</fareBaggageAllowance>
+                                <fees>
+                                    <totalAmount>
+                                        <accountingSign>ADC</accountingSign>
+                                        <currency>
+                                            <code></code>
+                                        </currency>
+                                        <value>0.0</value>
+                                    </totalAmount>
+                                </fees>
+                                <surcharges>
+                                    <totalAmount>
+                                        <accountingSign>ADC</accountingSign>
+                                        <currency>
+                                            <code></code>
+                                        </currency>
+                                        <value>0.0</value>
+                                    </totalAmount>
+                                </surcharges>
+                                <taxes>
+                                    <taxList>
+                                        <paid>false</paid>
+                                        <taxAmount>
+                                            <accountingSign>ADC</accountingSign>
+                                            <currency>
+                                                <code>TMT</code>
+                                            </currency>
+                                            <value>122.5</value>
+                                        </taxAmount>
+                                        <taxCode>TM</taxCode>
+                                    </taxList>
+                                    <taxList>
+                                        <paid>false</paid>
+                                        <taxAmount>
+                                            <accountingSign>ADC</accountingSign>
+                                            <currency>
+                                                <code>TMT</code>
+                                            </currency>
+                                            <value>52.5</value>
+                                        </taxAmount>
+                                        <taxCode>QP</taxCode>
+                                    </taxList>
+                                    <totalAmount>
+                                        <accountingSign>ADC</accountingSign>
+                                        <currency>
+                                            <code>TMT</code>
+                                        </currency>
+                                        <value>175.0</value>
+                                    </totalAmount>
+                                </taxes>
+                                <totalFare>
+                                    <amount>
+                                        <accountingSign>ADC</accountingSign>
+                                        <currency>
+                                            <code>TMT</code>
+                                        </currency>
+                                        <value>875.1</value>
+                                    </amount>
+                                </totalFare>
+                                <discountApplied>false</discountApplied>
+                            </pricingInfo>
+                            <pricingOverview>
+                                <equivTotalAmountList>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code>TMT</code>
+                                    </currency>
+                                    <value>700.1</value>
+                                </equivTotalAmountList>
+                                <totalAmount>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code>TMT</code>
+                                    </currency>
+                                    <value>875.1</value>
+                                </totalAmount>
+                                <totalBaseFare>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code>TMT</code>
+                                    </currency>
+                                    <value>700.1</value>
+                                </totalBaseFare>
+                                <totalDiscount>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code></code>
+                                    </currency>
+                                    <value>0.0</value>
+                                </totalDiscount>
+                                <totalOtherFee>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code></code>
+                                    </currency>
+                                    <value>0.0</value>
+                                </totalOtherFee>
+                                <totalPenalty>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code></code>
+                                    </currency>
+                                    <value>0.0</value>
+                                </totalPenalty>
+                                <totalServiceCharge>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code></code>
+                                    </currency>
+                                    <value>0.0</value>
+                                </totalServiceCharge>
+                                <totalSurcharge>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code></code>
+                                    </currency>
+                                    <value>0.0</value>
+                                </totalSurcharge>
+                                <totalTax>
+                                    <accountingSign>ADC</accountingSign>
+                                    <currency>
+                                        <code>TMT</code>
+                                    </currency>
+                                    <value>175.0</value>
+                                </totalTax>
+                            </pricingOverview>
+                        </ticketItemList>
+						   <!-- Общая стоимость билета -->
+                        <totalAmount>
+                            <accountingSign>ADC</accountingSign>
+                            <currency>
+                                <code>TMT</code>
+                            </currency>
+                            <value>875.1</value>
+                        </totalAmount>
+                    </ticketInfo>
+                </airBookingList>
+            </AirTicketReservationResponse>
+        </ns2:TicketReservationResponse>
+    </S:Body>
+</S:Envelope>
