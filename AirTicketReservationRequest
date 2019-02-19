@@ -1,0 +1,24 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.soap.ws.crane.hititcs.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <impl:TicketReservation>
+         <AirTicketReservationRequest>
+            <clientInformation>,
+			<!-- Логин/пароль для тестового стенда http://tua-stage.crane.aero/craneota/CraneOTAService -->
+               <clientIP>129.0.0.1</clientIP>
+               <member>false</member>
+               <password>Test123</password>
+               <userName>CHISTA</userName>
+               <preferredCurrency>TMT</preferredCurrency>
+            </clientInformation>
+            <bookingReferenceID>
+			<!-- Идентификатор брони-->
+               <ID>3A3P3T</ID>
+            </bookingReferenceID>
+            <!-- Если тег VIEW_ONLY - предварительный просмотр условий на резервирование билета
+			     Если COMMIT - непосредственное резервирование билетов-->
+            <requestPurpose>VIEW_ONLY</requestPurpose>
+         </AirTicketReservationRequest>
+      </impl:TicketReservation>
+   </soapenv:Body>
+</soapenv:Envelope>
