@@ -1,0 +1,385 @@
+<?xml version="1.0" ?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:CreateBookingResponse xmlns:ns2="http://impl.soap.ws.crane.hititcs.com/">
+            <AirBookingResponse>
+                <airBookingList>
+                    <airReservation>
+                        <airItinerary>
+                            <bookOriginDestinationOptions>
+                                <bookOriginDestinationOptionList>
+                                    <bookFlightSegmentList>
+									<!-- Активный код, "забронировано, но не оформлено" https://www.airliners.net/forum/viewtopic.php?t=324595-->
+                                        <actionCode>HK</actionCode>
+										<!--? -->
+                                        <addOnSegment>false</addOnSegment>
+                                        <bookingClass>
+										<!-- Класс обслуживания -->
+                                            <cabin>ECONOMY</cabin>
+											<!-- Код салона -->
+                                            <resBookDesigCode>H</resBookDesigCode>
+											 <!-- Количество мест, доступных для резервирования -->
+                                            <resBookDesigQuantity>0</resBookDesigQuantity>
+                                        </bookingClass>
+                                        <fareInfo>
+                                            <cabinClassCode>Y</cabinClassCode>
+											<!-- Тариф по перевозу багажа -->
+                                            <fareBaggageAllowance>
+                                          <!-- Тип -->
+                                                <allowanceType>WEIGHT</allowanceType>
+												 <!-- ? -->
+                                                <maxAllowedPieces>0</maxAllowedPieces>
+												 <!-- Максимально доступный вес-->
+                                                <maxAllowedWeight>
+												 <!-- Размерность -->
+                                                    <unitOfMeasureCode>KG</unitOfMeasureCode>
+													 <!-- Максимальный вес -->
+                                                    <weight>25</weight>
+                                                </maxAllowedWeight>
+                                            </fareBaggageAllowance>
+											 <!-- Класс обслуживания -->
+                                            <fareGroupName>ECONOMY</fareGroupName>
+											<!-- Код тарифа -->
+                                            <fareReferenceCode>HOW 6M43</fareReferenceCode>
+											 <!-- Идентификатор тарифа -->
+                                            <fareReferenceID>eccaf05c942442325a2886759cf134bcd650013147fa476fe08447bbdf9a1f0987df0730116205db3b83a84279fc29c84f2499566b7801330bd2c29b8aaff435</fareReferenceID>
+                                              <!-- Название тарифа -->
+											<fareReferenceName>H6OW/USD </fareReferenceName>
+                                            <!-- Номер в последовательности участков траектории полёта -->
+											<flightSegmentSequence>0</flightSegmentSequence>
+                                            <!-- Код класса обслуживания, на который должен быть перебронирован рейса
+													по более низкому тарифу-->
+											<resBookDesigCode>H</resBookDesigCode>
+                                        </fareInfo>
+                                        <flightSegment>
+                                    <arrivalAirport>
+                                        <cityInfo>
+                                            <city>
+											<!-- Город прибытия (код аэропорта, наименование города прибытия)-->
+                                                <locationCode>ALA</locationCode>
+                                                <locationName>Almaty</locationName>
+												<!-- Указание языка, на котором написано название города-->
+                                                <locationNameLanguage>EN</locationNameLanguage>
+                                            </city>
+                                            <country>
+											<!-- Страна прибытия (код страны, наименование страны прибытия) -->
+                                                <locationCode>KZ</locationCode>
+                                                <locationName>Kazakhstan</locationName>
+												<!-- Указание языка, на котором написано название страны-->
+                                                <locationNameLanguage>EN</locationNameLanguage>
+												<!-- Код валюты-->
+                                                <currency>
+                                                    <code>KZT</code>
+                                                </currency>
+                                            </country>
+                                        </cityInfo>
+										<!-- Нормативный контроль-->
+                                        <codeContext>IATA</codeContext>
+										<!-- Язык описания наименований в документе-->
+                                        <language>EN</language>
+											<!-- Код аэропорта прибытия-->
+                                        <locationCode>ALA</locationCode>
+										<!-- Наименование аэропорта прибытия-->
+                                        <locationName>Almaty</locationName>
+                                    </arrivalAirport>
+									<!-- Точное время прибытия рейса-->
+                                    <arrivalDateTime>2019-02-22T12:00:00+05:00</arrivalDateTime>
+									<!-- Информация об месте отправления-->
+                                    <departureAirport>
+                                        <cityInfo>
+                                            <city>
+											<!-- Город отправления (код аэропорта, наименование города отправления)-->
+                                                <locationCode>ASB</locationCode>
+                                                <locationName>Ashgabad</locationName>
+												<!-- Указание языка, на котором написано название города-->
+                                                <locationNameLanguage>EN</locationNameLanguage>
+                                            </city>
+                                            <country>
+											<!-- Страна отправления (код страны, наименование страны оправления) -->
+                                                <locationCode>TM</locationCode>
+                                                <locationName>Turkmenistan</locationName>
+												<!-- Указание языка, на котором написано название страны-->
+                                                <locationNameLanguage>EN</locationNameLanguage>
+												<!-- Код валюты-->
+                                                <currency>
+                                                    <code>TMT</code>
+                                                </currency>
+                                            </country>
+                                        </cityInfo>
+										<!-- Нормативный контроль-->
+                                        <codeContext>IATA</codeContext>
+										<!-- Язык описания наименований в документе-->
+                                        <language>EN</language>
+											<!-- Код аэропорта отправления-->
+                                        <locationCode>ASB</locationCode>
+											<!-- Наименование аэропорта отправления -->
+                                        <locationName>Ashgabat International</locationName>
+                                    </departureAirport>
+									<!-- Точное время отправления-->
+                                    <departureDateTime>2019-02-22T08:10:00+05:00</departureDateTime>
+                                    <!-- Тип самолета (например, B737-800 - тип самолета,16C/144Y - 2-х классная компановка,
+   								 	    16 мест бизнесс-класса, 144 - эконом-класса)-->
+									<equipment>
+                                        <airEquipType>B737-800_16C/144Y</airEquipType>
+										<!-- Смена самолета без смены номера - не предусмотрена-->
+                                        <changeofGauge>false</changeofGauge>
+                                    </equipment>
+									<!-- ?-->
+                                    <stopQuantity>0</stopQuantity>
+									<!-- ?-->
+                                    <accumulatedDuration/>
+									<!-- Код авиакомпании по IATA-->
+                                    <airline>
+                                        <code>T5</code>
+                                    </airline>
+									<!-- Возможность совместной эксплуатации авиарейса двумя и более авиакомпаниями -->
+                                    <codeshare>false</codeshare>
+									<!-- ?-->
+                                    <distance>0</distance>
+									<!-- Номер рейса без кода авиакомпании (полный номер будет, например, T5 715)-->
+                                    <flightNumber>717</flightNumber>
+									<!-- Идентификационный код сегмента -->
+                                    <flightSegmentID/>
+									<!-- ?-->
+                                    <flownMileageQty>0</flownMileageQty>
+									<!-- ?-->
+                                    <groundDuration/>
+										<!-- Продолжительность рейса (в данном случае, 2 часа 55 минут) -->
+                                    <journeyDuration>PT2H55M</journeyDuration>
+									<!-- Повременный тариф -->
+                                    <onTimeRate>0</onTimeRate>
+									<!-- Если самолет перемещется внутри страны - DOMESTIC, иначе - INTERNATIONAL-->
+                                    <sector>INTERNATIONAL</sector>
+									<!-- Требование данных (·фамилия, имя (так, как они указаны в паспорте, который будет предъявляться в аэропортуво время регистрации);
+										дата рождения; пол)-->
+                                    <secureFlightDataRequired>false</secureFlightDataRequired>
+									<!-- Тип билета. Если электронные, то E_TICKET, иначе - PAPER-->
+                                    <ticketType>PAPER</ticketType>
+									<!-- ?-->
+                                    <trafficRestriction>
+                                        <code/>
+                                        <explanation/>
+                                    </trafficRestriction>
+                                </flightSegment>
+										<!-- ? -->
+                                        <referenceID>7558341</referenceID>
+										<!-- Код ответа (забронировано, но не оплачено)-->
+                                        <responseCode>HK</responseCode>
+										<!-- Номер последовательности -->
+                                        <sequenceNumber>0</sequenceNumber>
+										<!-- Статус(забронировано, но не оплачено)-->
+                                        <status>HK</status>
+                                    </bookFlightSegmentList>
+                                </bookOriginDestinationOptionList>
+                            </bookOriginDestinationOptions>
+                        </airItinerary>
+						
+		
+                        <airTravelerList>
+						<!-- Сопровождение детей -->
+                    <accompaniedByInfant/>
+					<!-- Дата рождения-->
+                            <birthDate>1985-06-10T00:00:00+06:00</birthDate>
+							<!-- ИНформация о компании-->
+                            <companyInfo></companyInfo>
+							<!-- Пол -->
+                            <gender>M</gender>
+                            <!-- Нужны ли носилки, если специально не указано, то по умолчанию false -->
+							<hasStrecher/>
+							<!-- Родители как сопровождающие -->
+                            <parentSequence>-1</parentSequence>
+							<!-- Тип пассажира -->
+                            <passengerTypeCode>ADLT</passengerTypeCode>
+							<!-- Номер паспорта -->
+                            <passportNumber>A-23422243</passportNumber>
+
+                            <personName>
+								<!-- Имя пассажира -->
+                                <givenName>AAA</givenName>
+								<!-- Тип обращения к пассажиру -->
+                                <nameTitle>MR</nameTitle>
+								<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                                <shareMarketInd>false</shareMarketInd>
+								 <!-- Фамилия пассажира на английском-->
+                                <surname>TEST</surname>
+                            </personName>
+							<!-- Имя пассажира на английском -->
+                            <personNameEN>
+                                <!-- Имя пассажира на английском-->
+                                <givenName>AAA</givenName>
+								<!-- Тип обращения к пассажиру -->
+								<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                                <shareMarketInd>false</shareMarketInd>
+								 <!-- Фамилия пассажира на английском-->
+                                <surname>TEST</surname>
+                            </personNameEN>
+							 <!-- Требуемое количество сидений-->
+                            <requestedSeatCount>1</requestedSeatCount>
+							<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                            <shareMarketInd>false</shareMarketInd>
+							<!-- Идентификатор пассажира-->
+                            <travelerReferenceID>6592462</travelerReferenceID>
+									<!-- Отсутсвие сопровождения ребенка (актуально только для типа пассажира CHLD) -->
+                            <unaccompaniedMinor>false</unaccompaniedMinor>
+                        </airTravelerList>
+                        
+						<!-- Информация о поставщике услуг-->
+						<arrangerInfo>
+						
+						<!-- Код агентства-->
+                            <agencyCode>ITM SEVER</agencyCode>
+								<!-- Название агентства-->
+                            <agencyName>RU ITM SEVER GSA Sales Office</agencyName>
+							<!--Тип агентства-->	
+                            <agencyType>AG</agencyType>
+							<!-- Контактная информация-->
+                            <contactInfo>
+							<!-- Информация о компании-->
+                                <companyInfo>
+								<!-- Код города (Питерсберг, шт. Аляска - http://www.betravel.ru/iata-city-code.php?city=PSG&country=US)-->
+                                    <cityCode>PSG</cityCode>
+                                  <!-- Код авиакомпании по IATA-->
+                                    <code>T5</code>
+									<!-- Кодовое имя? -->
+                                    <codeContext>CRANE</codeContext>
+									<!-- Полное наименование -->
+                                    <companyFullName>RU ITM SEVER GSA Sales Office</companyFullName>
+									<!-- Краткое наименование -->
+                                    <companyShortName>ITM SEVER</companyShortName>
+									<!-- Код страны -->
+                                    <countryCode>RU</countryCode>
+                                </companyInfo>
+                                <personName>
+									<!-- Имя клиента-->
+                                    <givenName>Full</givenName>
+									<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                                    <shareMarketInd>false</shareMarketInd>
+									<!-- Фамилия клиента-->
+                                    <surname> Name</surname>
+                                </personName>
+								<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                                <shareMarketInd>false</shareMarketInd>
+								<!-- Использовать для фактурирования.
+Точного аналога английского слова «invoice» в русском языке не существует. Наиболее близкий термин — «счет» или «счет-фактура».
+Инвойсинг (англ. invoicing) — это процесс выставления счетов на оплату за уже поставленный товар, оказанную услугу (инвойсов). 
+То есть отправляемый документ фактически является платежным, в условиях российского рынка такой тип сделок отсутствует. -->
+                                <useForInvoicing>false</useForInvoicing>
+                            </contactInfo>
+							<!-- Валюта -->
+                            <currency>RUB</currency>
+							<!-- Номер по IATA(?)-->
+                            <IATANumber>12345678</IATANumber>
+							<!-- Код пользователя (?) -->
+                            <userCode>CH</userCode>
+							<!-- Имя пользователя (?) -->
+                            <userName>CHISTA</userName>
+                        </arrangerInfo>
+						<!-- Информация о бронировании -->
+                        <bookingReferenceIDList>
+						<!-- Наименование компании-->
+                            <companyName>
+								<!-- Код города (Питерсберг, шт. Аляска - http://www.betravel.ru/iata-city-code.php?city=PSG&country=US)-->
+                                    <cityCode>PSG</cityCode>
+                                  <!-- Код авиакомпании по IATA-->
+                                    <code>T5</code>
+									<!-- Кодовое имя? -->
+                                    <codeContext>CRANE</codeContext>
+									<!-- Полное наименование -->
+                                    <companyFullName>RU ITM SEVER GSA Sales Office</companyFullName>
+									<!-- Краткое наименование -->
+                                    <companyShortName>ITM SEVER</companyShortName>
+									<!-- Код страны -->
+                                    <countryCode>RU</countryCode>
+                            </companyName>
+							<!-- Идентификатор брони-->
+                            <ID>3A3KBM</ID>
+							<!-- Идентификатор -->
+                            <referenceID>80596534</referenceID>
+                        </bookingReferenceIDList>
+						
+						<!-- Тип бронирования (?) -->
+                        <bookingType>R</bookingType>
+                        <!-- Контакты клиента -->
+                        <contactInfoList>
+						<!--Адрес -->
+						
+                            <adress>
+							<!--? -->
+                                <addressLineList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"></addressLineList>
+								<!-- Код страны -->
+                                <countryCode>TR</countryCode>
+								<!-- Форматирование -->
+                                <formatted>false</formatted>
+								<!-- Предпочтения -->
+                                <preferred>false</preferred>
+								<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                                <shareMarketInd>false</shareMarketInd>
+                            </adress>
+							<!-- Информация о компании - поставщике услуги: код города, ее наименование и код страны -->
+                            <companyInfo>
+                                <cityCode>PSG</cityCode>
+                                <contactName>BBB TEST</contactName>
+                                <countryCode>RU</countryCode>
+                            </companyInfo>
+							<!-- Электронная почта -->
+                            <email>
+							<!-- ? -->
+                                <markedForSendingRezInfo>false</markedForSendingRezInfo>
+								<!-- ?-->
+                                <preferred>false</preferred>
+								<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                                <shareMarketInd>false</shareMarketInd>
+                            </email>
+							<!-- Информация о клиента: имя, фамилия-->
+                            <personName>
+                                <givenName>BBB</givenName>
+								<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                                <shareMarketInd>false</shareMarketInd>
+                                <surname> TEST</surname>
+                            </personName>
+                            <phoneNumber>
+							<!--Код региона -->
+                                <areaCode>555</areaCode>
+								<!-- Код страны-->
+                                <countryCode>+90</countryCode>
+								<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+								<markedForSendingRezInfo>false</markedForSendingRezInfo>
+								<!-- ?-->
+                                <preferred>false</preferred>
+								<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                                <shareMarketInd>false</shareMarketInd>
+								<!-- Номер телефона без кода страны и региона -->
+                                <subscriberNumber>4443322</subscriberNumber>
+                            </phoneNumber>
+                            <!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
+                            <shareMarketInd>false</shareMarketInd>
+							<!-- -->
+                            <useForInvoicing>false</useForInvoicing>
+                        </contactInfoList>
+						<!-- Дата создания брони -->
+                        <dateCreated>2019-02-14T20:55:18+05:00</dateCreated>
+						<!-- Групповое бронирование -->
+                        <groupBooking>false</groupBooking>
+						<!-- ? -->
+                        <nonTicketedElementsExist>true</nonTicketedElementsExist>
+						<!-- -->
+                        <smsSaleApplicable>false</smsSaleApplicable>
+						<!--? -->
+                        <specialRequestDetails></specialRequestDetails>
+						<!-- Билеты на вылет(?) -->
+                        <ticketOnDeparture>false</ticketOnDeparture>
+						<!-- Время истечения срока брони без оплаты-->
+                        <ticketTimeLimit>2019-02-17T20:55:18+05:00</ticketTimeLimit>
+						<!-- Страховка -->
+                        <travelInsurance>
+						<!-- ?-->
+                            <nationalIDRestrictionExist>false</nationalIDRestrictionExist>
+							<!--? -->
+                            <selected>false</selected>
+                        </travelInsurance>
+                    </airReservation>
+                </airBookingList>
+            </AirBookingResponse>
+        </ns2:CreateBookingResponse>
+    </S:Body>
+</S:Envelope>
