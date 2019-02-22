@@ -175,9 +175,9 @@
 					<!-- Пол -->
                     <gender>M</gender>
 					<!-- Нужны ли носилки, если специально не указано, то по умолчанию false -->
-                    <hasStrecher/>
+					<!--   <hasStrecher/>  -->
 					<!-- Родители как сопровождающие -->
-                    <parentSequence/>
+                                        <!-- <parentSequence/>-->
 					<!-- Тип пассажира -->
                     <passengerTypeCode>ADLT</passengerTypeCode>
 					<!-- Номер паспорта -->
@@ -191,17 +191,19 @@
                         <surname>TEST</surname>
                     </personName>
 					<!-- Требуемое количество сидений-->
+					<!-- Всегда 1 -->
                     <requestedSeatCount>1</requestedSeatCount>
 					<!-- Разрешение на работу с персональной информацией в маркейтинговых целях-->
                     <shareMarketInd/>
 					<!-- Номер социального страхования -->
                     <socialSecurityNumber>123423433</socialSecurityNumber>
 					<!-- Отсутсвие сопровождения ребенка (актуально только для типа пассажира CHLD) -->
-                    <unaccompaniedMinor/>
+					<!-- <unaccompaniedMinor/>-->
+                    
                 </airTravelerList>
                 <contactInfoList>
 				<!-- Адрес клиента -->
-                    <adress>
+                    <adress><!--  гражданство ---->
 					<!-- Международный код страны -->
                         <countryCode>TR</countryCode>
 						<!-- ? -->
@@ -247,15 +249,16 @@
 Точного аналога английского слова «invoice» в русском языке не существует. Наиболее близкий термин — «счет» или «счет-фактура».
 Инвойсинг (англ. invoicing) — это процесс выставления счетов на оплату за уже поставленный товар, оказанную услугу (инвойсов). 
 То есть отправляемый документ фактически является платежным, в условиях российского рынка такой тип сделок отсутствует. -->
-                    <useForInvoicing/>
+                    <!--  <useForInvoicing/> -->
+		   
                 </contactInfoList>
 				<!-- Цель запроса -->
                 <requestPurpose>MODIFY_PERMANENTLY</requestPurpose>
 				<!-- Особые детали -->
-                <specialRequestDetails>
+             <!--     <specialRequestDetails>
                     <otherServiceInformationList>
 					<!-- Дополнительная информация  о клиенте -->
-                        <otherServiceInformationList>
+                      <otherServiceInformationList>
 						<!-- Порядковый номер клиента-->
                             <airTravelerSequence>0</airTravelerSequence>
 							<!-- Other Service Information  - дополнительная информация о клиенте -->
@@ -275,6 +278,7 @@
 						
                     </otherServiceInformationList>
                 </specialRequestDetails>
+		-->
             </AirBookingRequest>
         </impl:CreateBooking>
     </soapenv:Body>
